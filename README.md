@@ -1,4 +1,16 @@
-# MCCA
+# MCCA-custom
+
+> **本仓库不是原项目，也不是官方分支。**
+>
+> 本项目**衍生自 [MaaXYZ/MCCA](https://github.com/MaaXYZ/MCCA)**（原作者 MaaXYZ），
+> 基于其发布包 `MCCA-win-x86_64-v1.7.5`。原项目的著作权与所有荣誉归原作者及上游贡献者所有；
+> 本仓库沿用上游的 [MIT License](LICENSE)，并完整保留原始版权与许可声明。
+>
+> 上游 `main` 分支自 2025-11-26 起未再更新。本仓库只是**由我个人继续维护、修复兼容性问题的衍生版本**：
+> 仅针对游戏界面改版、运行库升级和本地环境做修补，不新增官方功能、不代表上游立场，
+> 与 MaaXYZ 及 MCCA 官方无关联。相关问题请在本仓库提 issue，不要提到上游。
+>
+> 如原作者对本项目有任何意见（包括希望调整或下架），欢迎联系，我会配合处理。
 
 > **本仓库是定制可运行版，不是上游源码仓库。** 基于 MCCA v1.7.5 资源包，
 > GUI 已升级到 MFAAvalonia 2.16.4 / MaaFramework 5.14.3，pipeline 已迁移到 `[JumpBack]` 语法。
@@ -19,7 +31,7 @@
 5. **改了 pipeline 要重启 GUI**：`resource/base/pipeline/*.json` 会被缓存在内存里，
    不重启不会重新加载。
 
-## 相对上游的改动
+## 本仓库相对上游的改动（个人维护部分）
 
 - GUI 1.8.7 → 2.16.4；MaaFramework 5.0.0-beta.4 → 5.14.3
 - 19 个 pipeline / 289 节点：`is_sub`、`interrupt` 迁移为 `[JumpBack]`
@@ -33,6 +45,10 @@
 运行日志、`debug/`、`temp/`、旧版程序备份与升级过程文件不入库（见 `.gitignore`）。
 
 ---
+
+> **以下为上游 MCCA 的原始 README 内容，原样保留**（版权归 MaaXYZ）。
+> 其中的下载地址、编译方式、交流群等信息均指向上游项目，请以
+> [上游仓库](https://github.com/MaaXYZ/MCCA) 为准；本仓库的使用说明请以上面的「克隆后首次运行」为准。
 
 基于全新架构的 交错战线 CrossCore 小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
