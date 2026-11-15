@@ -1,0 +1,17 @@
+# 运行时产生的日志、截图、临时文件
+debug/
+logs/
+temp/
+backup/
+*.log
+*.bak
+*.json.bak
+
+# 旧版 GUI 程序备份与升级过程文件（本地保留，不入库）
+_legacy_v1.7.5/
+_mfa_update/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store

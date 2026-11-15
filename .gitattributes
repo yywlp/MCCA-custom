@@ -1,0 +1,13 @@
+# 二进制文件禁止换行转换，保证 clone 后与本地字节一致
+*.dll binary
+*.exe binary
+*.pdb binary
+*.so binary
+*.dylib binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.onnx binary
+*.zip binary
+*.7z binary
+*.pyc binary

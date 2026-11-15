@@ -1,0 +1,241 @@
+{
+  "ColorTheme": "Blue",
+  "BaseTheme": "Dark",
+  "CurrentLanguage": "zh-CN",
+  "CurrentTasks": [
+    "启动游戏<|||>进入首页",
+    "活动<|||>活动_入口",
+    "每日免费礼包<|||>Shopping",
+    "限时贸易所购买<|||>Time-limited Shopping",
+    "模拟军演<|||>模拟军演",
+    "基建<|||>Infrastructures",
+    "每日探索<|||>出击任务列表",
+    "周本<|||>WeekInstance",
+    "领取奖励(邮箱+每日+通行证)<|||>Awards",
+    "关闭游戏<|||>关闭游戏",
+    "历战试炼<|||>历战试炼"
+  ],
+  "Resource": "官服",
+  "TaskItems": [
+    {
+      "name": "启动游戏",
+      "entry": "进入首页",
+      "doc": [
+        "无"
+      ],
+      "check": true
+    },
+    {
+      "name": "活动",
+      "entry": "活动_入口",
+      "doc": [
+        "[color:red]活动功能暂时只有困难最后一关，且版本更新后未必能继续使用[/color]"
+      ],
+      "check": true
+    },
+    {
+      "name": "每日免费礼包",
+      "entry": "Shopping",
+      "doc": [
+        "无"
+      ],
+      "check": true
+    },
+    {
+      "name": "限时贸易所购买",
+      "entry": "Time-limited Shopping",
+      "doc": [
+        "无"
+      ],
+      "check": true
+    },
+    {
+      "name": "模拟军演",
+      "entry": "模拟军演",
+      "doc": [
+        "无"
+      ],
+      "check": true,
+      "option": [
+        {
+          "name": "刷新战力阈值",
+          "index": 0
+        }
+      ],
+      "pipeline_override": {
+        "首页_出击": {
+          "next": "模拟军演_入口"
+        }
+      }
+    },
+    {
+      "name": "基建",
+      "entry": "Infrastructures",
+      "doc": [
+        "可能会有bug"
+      ],
+      "check": false,
+      "option": [
+        {
+          "name": "是否访问每个好友换抽",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "每日探索",
+      "entry": "出击任务列表",
+      "check": false,
+      "option": [
+        {
+          "name": "关卡选择",
+          "index": 0
+        },
+        {
+          "name": "第几层",
+          "index": 0
+        },
+        {
+          "name": "是否手动选择次数(开启燃料使用)",
+          "index": 0
+        },
+        {
+          "name": "手动次数",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "周本",
+      "entry": "WeekInstance",
+      "check": false,
+      "option": [
+        {
+          "name": "周本关卡选择",
+          "index": 0
+        }
+      ],
+      "pipeline_override": {
+        "首页_出击": {
+          "next": "ActivityExploration"
+        }
+      }
+    },
+    {
+      "name": "领取奖励(邮箱+每日+通行证)",
+      "entry": "Awards",
+      "doc": [
+        "无"
+      ],
+      "check": true
+    },
+    {
+      "name": "历战试炼",
+      "entry": "历战试炼",
+      "doc": [
+        "测试中,暂时仅支持打限时boss，任务目标达到10为高进度，将不会继续任务；[color:red]开启该任务需自行配置有足够强度的队伍[/color]"
+      ],
+      "check": true,
+      "option": [
+        {
+          "name": "是否打挑战难度",
+          "index": 0
+        },
+        {
+          "name": "挑战难度选择",
+          "index": 0
+        }
+      ],
+      "pipeline_override": {
+        "活动选择": {
+          "expected": "历战试炼",
+          "next": "历战试炼-关卡选择"
+        }
+      }
+    },
+    {
+      "name": "关闭游戏",
+      "entry": "关闭游戏",
+      "check": false
+    }
+  ],
+  "EnableEdit": false,
+  "UI.MainWindow.Width": "1280",
+  "UI.MainWindow.Height": "744.6666666666666",
+  "AdbDevice": {
+    "InfoHandle": {
+      "value": 2072957390848
+    },
+    "Name": "MuMuPlayer12 v5",
+    "AdbPath": "D:/Program Files/Netease/MuMuPlayer-12.0/nx_main/adb.exe",
+    "AdbSerial": "127.0.0.1:16384",
+    "ScreencapMethods": 64,
+    "InputMethods": 18446744073709551615,
+    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"D:/Program Files/Netease/MuMuPlayer-12.0\"}}}",
+    "AgentPath": "./MaaAgentBinary"
+  },
+  "ResourceUpdateChannelInitialized": true,
+  "UI.HasCompletedFirstUseTutorial": true,
+  "UI.MainWindow.Maximized": "false",
+  "UI.MainWindow.PositionX": "-32000",
+  "UI.MainWindow.PositionY": "-32000",
+  "UI.DashboardCardGrid.Layout.TaskQueueView": [
+    {
+      "Id": "settings",
+      "Col": 4,
+      "ColSpan": 4,
+      "RowSpan": 5,
+      "ExpandedRowSpan": 5,
+      "ExpandedColSpan": 4,
+      "MaximizedRowSpan": 1,
+      "MaximizedColSpan": 1
+    },
+    {
+      "Id": "task_list",
+      "ColSpan": 4,
+      "RowSpan": 8,
+      "ExpandedRowSpan": 8,
+      "ExpandedColSpan": 4,
+      "MaximizedRowSpan": 1,
+      "MaximizedColSpan": 1
+    },
+    {
+      "Id": "task_desc",
+      "Col": 4,
+      "Row": 5,
+      "ColSpan": 4,
+      "RowSpan": 3,
+      "ExpandedRowSpan": 3,
+      "ExpandedColSpan": 4,
+      "MaximizedRowSpan": 1,
+      "MaximizedColSpan": 1
+    },
+    {
+      "Id": "live_view",
+      "Col": 8,
+      "ColSpan": 4,
+      "RowSpan": 4,
+      "ExpandedRowSpan": 4,
+      "ExpandedColSpan": 4,
+      "MaximizedRowSpan": 1,
+      "MaximizedColSpan": 1
+    },
+    {
+      "Id": "log",
+      "Col": 8,
+      "Row": 4,
+      "ColSpan": 4,
+      "RowSpan": 4,
+      "ExpandedRowSpan": 4,
+      "ExpandedColSpan": 4,
+      "MaximizedRowSpan": 1,
+      "MaximizedColSpan": 1
+    }
+  ],
+  "UI.TaskQueue.DashboardLayout.TaskQueueView": {
+    "rows": 8,
+    "columns": 12,
+    "spacing": 10.0
+  },
+  "UI.DashboardCardGrid.ResourceLayoutHash.TaskQueueView": "8962C0D3B352F180BDD17B02B4FC6D2FD45565EC8E4A832B52443D453653CAF0"
+}
