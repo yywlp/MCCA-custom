@@ -28,8 +28,8 @@
 4. **换机器时改路径**：`config/config.json` 与 `config/instances/default.json` 里的
    `AdbPath`、`Config.extras.mumu.path` 仍指向原来的 MuMu 安装目录，
    需要改成实际路径，或直接在 GUI 里重新自动选择。
-5. **改了 pipeline 要重启 GUI**：`resource/base/pipeline/*.json` 会被缓存在内存里，
-   不重启不会重新加载。
+5. **改了 pipeline 或选项要重启 GUI**：`resource/base/pipeline/*.json` 和 `interface.json`
+   都会被缓存在内存里，不重启不会重新加载（新增的周本选项也要重启才会出现）。
 
 ## 本仓库相对上游的改动（个人维护部分）
 
@@ -40,6 +40,11 @@
   `DailyGift.roi` → `[20,40,240,640]`，并放宽「免费」按钮搜索范围
 - 限时贸易所：同步修正 `time_limited.roi`
 - 每日签到：`签到.expected` → `^签到$`，避免把「已签到」当成可点按钮反复空点
+- 周本：新增 GUI 选项「**周本是否已打完**」。周本全部关卡通关后，每周重置只需点一下
+  「碎星虚影」入口卡片就能拿到本周报酬（卡片顶部 `600/600`），无需再进战斗。
+  选「**是，已打完只领奖**」时，点完卡片自动关闭「获得物品」弹窗并返回首页，
+  跳过后面找关卡、选关、战斗的全部节点；选「否，正常打（默认）」保持原有流程。
+  同时把 `ActivityExploration_Exist` 的识别框移到新版卡片区域（旧框还指着左下角）。
 - 配置迁移为新版多实例结构（`config/instances/default.json`），保留原有任务队列
 
 运行日志、`debug/`、`temp/`、旧版程序备份与升级过程文件不入库（见 `.gitignore`）。

@@ -90,7 +90,8 @@
                 }
             },
             "option": [
-                "周本关卡选择"
+                "周本关卡选择",
+                "周本是否已打完"
             ]
         },
         {
@@ -1166,6 +1167,53 @@
                                 "[JumpBack]子任务_获得物品",
                                 "ActivityExploration_第五关",
                                 "ActivityExploration_CombatEnd3"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "周本是否已打完": {
+            "cases": [
+                {
+                    "name": "否，正常打（默认）",
+                    "pipeline_override": {
+                        "ActivityExploration_1": {
+                            "next": [
+                                "ActivityExploration_Exist",
+                                "ActivityExploration_2",
+                                "ActivityExploration_1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "是，已打完只领奖",
+                    "pipeline_override": {
+                        "ActivityExploration_1": {
+                            "next": [
+                                "[JumpBack]子任务_获得物品",
+                                "ActivityExploration_Exist"
+                            ]
+                        },
+                        "ActivityExploration_Exist": {
+                            "expected": [
+                                "600/600",
+                                "6007600",
+                                "6001600",
+                                "碎星虚影"
+                            ],
+                            "roi": [
+                                500,
+                                190,
+                                280,
+                                390
+                            ],
+                            "target": [
+                                60,
+                                25,
+                                45,
+                                45
                             ]
                         }
                     }
