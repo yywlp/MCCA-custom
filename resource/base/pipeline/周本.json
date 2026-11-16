@@ -73,9 +73,11 @@
             55
         ],
         "action": "Click",
+        "max_hit": 6,
         "next": [
             "ActivityExploration_Exist",
-            "ActivityExploration_Start"
+            "ActivityExploration_Start",
+            "ActivityExploration_3"
         ]
     },
     "ActivityExploration_第五关": {
@@ -90,9 +92,11 @@
             180
         ],
         "action": "Click",
+        "max_hit": 6,
         "next": [
             "ActivityExploration_Exist",
-            "ActivityExploration_第五关Start"
+            "ActivityExploration_第五关Start",
+            "ActivityExploration_第五关"
         ]
     },
     "ActivityExploration_Exist": {

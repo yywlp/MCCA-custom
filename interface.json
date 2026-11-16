@@ -59,7 +59,10 @@
             ],
             "pipeline_override": {
                 "首页_出击": {
-                    "next": "模拟军演_入口"
+                    "next": [
+                        "模拟军演_入口",
+                        "首页_出击"
+                    ]
                 }
             }
         },
@@ -86,7 +89,10 @@
             "entry": "WeekInstance",
             "pipeline_override": {
                 "首页_出击": {
-                    "next": "ActivityExploration"
+                    "next": [
+                        "ActivityExploration",
+                        "首页_出击"
+                    ]
                 }
             },
             "option": [
@@ -1177,15 +1183,7 @@
             "cases": [
                 {
                     "name": "否，正常打（默认）",
-                    "pipeline_override": {
-                        "ActivityExploration_1": {
-                            "next": [
-                                "ActivityExploration_Exist",
-                                "ActivityExploration_2",
-                                "ActivityExploration_1"
-                            ]
-                        }
-                    }
+                    "pipeline_override": {}
                 },
                 {
                     "name": "是，已打完只领奖",
@@ -1193,27 +1191,19 @@
                         "ActivityExploration_1": {
                             "next": [
                                 "[JumpBack]子任务_获得物品",
-                                "ActivityExploration_Exist"
+                                "ActivityExploration_已领完"
                             ]
                         },
-                        "ActivityExploration_Exist": {
+                        "ActivityExploration_已领完": {
+                            "recognition": "OCR",
                             "expected": [
-                                "600/600",
-                                "6007600",
-                                "6001600",
-                                "碎星虚影"
+                                "活动探索"
                             ],
                             "roi": [
-                                500,
-                                190,
-                                280,
-                                390
-                            ],
-                            "target": [
-                                60,
-                                25,
-                                45,
-                                45
+                                540,
+                                98,
+                                215,
+                                95
                             ]
                         }
                     }

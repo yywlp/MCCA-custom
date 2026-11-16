@@ -48,8 +48,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ReAc_Skill"
         ]
     },
     "DailyExplore_ReAc_Money": {
@@ -65,8 +67,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ReAc_Money"
         ]
     },
     "DailyExplore_ReAc_Experience": {
@@ -82,8 +86,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ReAc_Experience"
         ]
     },
     "DailyExplore_ReAc_Token": {
@@ -99,8 +105,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ReAc_Token"
         ]
     },
     "DailyExplore_LevelSelect": {
@@ -114,8 +122,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_MopUp"
+            "DailyExplore_MopUp",
+            "DailyExplore_LevelSelect"
         ]
     },
     "DailyExplore_MopUp": {
@@ -254,8 +264,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ChEm_1"
         ]
     },
     "DailyExplore_ChEm_2": {
@@ -271,8 +283,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ChEm_2"
         ]
     },
     "DailyExplore_ChEm_3": {
@@ -288,8 +302,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_ChEm_3"
         ]
     },
     "DailyExplore_UpAc": {
@@ -320,8 +336,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_UpAc_1"
         ]
     },
     "DailyExplore_UpAc_2": {
@@ -337,8 +355,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_UpAc_2"
         ]
     },
     "DailyExplore_UpAc_3": {
@@ -354,8 +374,10 @@
         ],
         "action": "Click",
         "post_delay": 2000,
+        "max_hit": 6,
         "next": [
-            "DailyExplore_LevelSelect"
+            "DailyExplore_LevelSelect",
+            "DailyExplore_UpAc_3"
         ]
     }
 }

@@ -106,9 +106,11 @@
         ],
         "count": 7,
         "action": "Click",
+        "max_hit": 6,
         "next": [
             "DailyTask_Receive1",
-            "DailyTask_Receive2"
+            "DailyTask_Receive2",
+            "DailyTask_Receive0"
         ]
     },
     "DailyTask_Receive1": {
@@ -401,9 +403,11 @@
             10,
             10
         ],
+        "max_hit": 6,
         "next": [
             "BattlePass_ReceiveAll",
-            "进入首页"
+            "进入首页",
+            "BattlePass_MissionExist"
         ]
     },
     "BattlePass_ReceiveAll": {
@@ -427,8 +431,10 @@
         ],
         "count": 7,
         "action": "Click",
+        "max_hit": 6,
         "next": [
-            "进入首页"
+            "进入首页",
+            "BattlePass_ReceiveAll"
         ]
     },
     "NoBattlePass": {

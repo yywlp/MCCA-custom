@@ -34,7 +34,7 @@
     {
       "name": "每日免费礼包",
       "entry": "Shopping",
-      "default_check": true,
+      "default_check": false,
       "doc": [
         "无"
       ]
@@ -42,7 +42,7 @@
     {
       "name": "限时贸易所购买",
       "entry": "Time-limited Shopping",
-      "default_check": true,
+      "default_check": false,
       "doc": [
         "无"
       ]
@@ -50,7 +50,7 @@
     {
       "name": "模拟军演",
       "entry": "模拟军演",
-      "default_check": true,
+      "default_check": false,
       "doc": [
         "无"
       ],
@@ -62,14 +62,17 @@
       ],
       "pipeline_override": {
         "首页_出击": {
-          "next": "模拟军演_入口"
+          "next": [
+            "模拟军演_入口",
+            "首页_出击"
+          ]
         }
       }
     },
     {
       "name": "基建",
       "entry": "Infrastructures",
-      "default_check": true,
+      "default_check": false,
       "doc": [
         "可能会有bug"
       ],
@@ -83,7 +86,7 @@
     {
       "name": "每日探索",
       "entry": "出击任务列表",
-      "default_check": true,
+      "default_check": false,
       "option": [
         {
           "name": "关卡选择",
@@ -106,16 +109,23 @@
     {
       "name": "周本",
       "entry": "WeekInstance",
-      "default_check": false,
+      "default_check": true,
       "option": [
         {
           "name": "周本关卡选择",
-          "index": 0
+          "index": 1
+        },
+        {
+          "name": "周本是否已打完",
+          "index": 1
         }
       ],
       "pipeline_override": {
         "首页_出击": {
-          "next": "ActivityExploration"
+          "next": [
+            "ActivityExploration",
+            "首页_出击"
+          ]
         }
       }
     },
@@ -154,7 +164,7 @@
     {
       "name": "关闭游戏",
       "entry": "关闭游戏",
-      "default_check": true
+      "default_check": false
     }
   ],
   "InstanceName": "配置 1",
