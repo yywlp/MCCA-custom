@@ -1197,13 +1197,13 @@
                         "ActivityExploration_已领完": {
                             "recognition": "OCR",
                             "expected": [
-                                "活动探索"
+                                "活动探"
                             ],
                             "roi": [
-                                540,
-                                98,
-                                215,
-                                95
+                                500,
+                                80,
+                                300,
+                                115
                             ]
                         }
                     }

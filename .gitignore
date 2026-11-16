@@ -3,6 +3,7 @@ debug/
 logs/
 temp/
 backup/
+_backup/
 *.log
 *.bak
 *.json.bak

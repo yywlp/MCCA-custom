@@ -8,18 +8,20 @@
     "ActivityExploration": {
         "recognition": "OCR",
         "expected": [
-            "活动探索"
+            "活动探"
         ],
         "roi": [
-            540,
-            98,
-            215,
-            95
+            500,
+            80,
+            300,
+            115
         ],
         "action": "Click",
         "post_delay": 2000,
+        "timeout": 60000,
         "next": [
             "ActivityExploration_1",
+            "[JumpBack]ActivityExploration_SwipeLeft",
             "ActivityExploration"
         ]
     },
@@ -29,10 +31,10 @@
             "碎星虚影"
         ],
         "roi": [
-            450,
-            443,
-            302,
-            98
+            15,
+            480,
+            1250,
+            70
         ],
         "action": "Click",
         "post_delay": 3000,
@@ -41,6 +43,24 @@
             "ActivityExploration_2",
             "ActivityExploration_1"
         ]
+    },
+    "ActivityExploration_SwipeLeft": {
+        "action": "Swipe",
+        "begin": [
+            1050,
+            400,
+            30,
+            30
+        ],
+        "end": [
+            650,
+            400,
+            30,
+            30
+        ],
+        "duration": 450,
+        "post_delay": 800,
+        "max_hit": 12
     },
     "ActivityExploration_2": {
         "recognition": "OCR",
